@@ -7,6 +7,14 @@ spring:
         enabled: true
         service-id: CONFIG
       profile: dev
+    stream:
+      bindings:
+        input:
+          destination: raw-sensor-data
+          content-type: application/json
+        output:
+          destination: raw-sensor-data
+          content-type: application/json
 management:
   endpoints:
     web:

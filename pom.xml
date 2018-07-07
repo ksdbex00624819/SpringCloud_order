@@ -31,6 +31,7 @@
         <order-common.version>0.0.1-SNAPSHOT</order-common.version>
         <product-client.version>0.0.1-SNAPSHOT</product-client.version>
         <spring-cloud-bus.version>2.0.0.RC2</spring-cloud-bus.version>
+        <spring-cloud-stream.version>Elmhurst.RELEASE</spring-cloud-stream.version>
     </properties>
 
     <dependencyManagement>
@@ -47,6 +48,14 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-bus-parent</artifactId>
                 <version>${spring-cloud-bus.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-stream-dependencies</artifactId>
+                <version>${spring-cloud-stream.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
